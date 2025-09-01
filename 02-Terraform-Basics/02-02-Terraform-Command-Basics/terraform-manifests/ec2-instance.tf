@@ -18,5 +18,5 @@ provider "aws" {
 resource "aws_instance" "ec2demo" {
   ami           = "ami-00ca32bbc84273381" # Amazon Linux in us-east-1, update as per your region
   instance_type = "t2.micro"
-  subnet_id     = "subnet-0cd1edd336eb850bb"
+  subnet_id     = "subnet-0cd1edd336eb850bb" #most likely it needs to be added as per previous error
 }
