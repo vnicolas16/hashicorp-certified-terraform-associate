@@ -1,15 +1,15 @@
 # Terraform Block
 terraform {
-  required_version = "~>1.13.0"
+  required_version = "~>1.12, <1.14" #it works because my version (1.13.1) is between that range
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "3.1"
     }
-    random = {
-      source = "hashicorp/random"
-      version = "3.0.1"
-    }    
+#    random = {
+#      source = "hashicorp/random"
+#      version = "3.0.1"
+#    }    
   }
 }
 
