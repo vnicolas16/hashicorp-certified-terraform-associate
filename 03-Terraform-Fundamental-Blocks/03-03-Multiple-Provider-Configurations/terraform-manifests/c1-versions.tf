@@ -1,6 +1,6 @@
 # Terraform Block
 terraform {
-  required_version = "~> 0.14.6"
+  required_version = "~> 1.13.0"
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -19,7 +19,7 @@ provider "aws" {
 provider "aws" {
   region = "us-west-1"
   profile = "default"
-  alias = "aws-west-1"
+  alias = "aws-west-1"    #Whatever resource I create using this alias, will create in us-west-1
 }
 
 
