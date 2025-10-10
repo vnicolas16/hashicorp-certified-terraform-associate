@@ -1,6 +1,10 @@
 # Create S3 Bucket per environment with for_each and maps
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 
+resource "random_id" "bucket_sufix" {
+  byte_length = 8 
+}
+
 resource "aws_s3_bucket" "mys3bucket" {
 
   # for_each Meta-Argument
@@ -11,8 +15,8 @@ resource "aws_s3_bucket" "mys3bucket" {
     prod = "my-papp-bucket"
   }
 
-  bucket = "${each.key}-${each.value}"
-  acl    = "private"
+  bucket = "${each.key}-${each.value}-${random_id.bucket_sufix.hex}"
+  #acl    = "private" no need this 2025
 
   tags = {
     Environment = each.key
