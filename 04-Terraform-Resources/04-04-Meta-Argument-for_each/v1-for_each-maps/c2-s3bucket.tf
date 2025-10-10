@@ -1,7 +1,7 @@
 # Create S3 Bucket per environment with for_each and maps
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 
-resource "random_id" "bucket_sufix" {
+resource "random_id" "bucket_sufix" {  #to avoid issues with bucket names globally
   byte_length = 8 
 }
 
