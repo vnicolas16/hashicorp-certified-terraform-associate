@@ -8,11 +8,11 @@ variable "aws_region" {
 variable "ec2_ami_id" {
   description = "AMI ID"
   type        = string
-  default     = "ami-0915bcb5fa77e4892" # Amazon2 Linux AMI ID
+  default     = "ami-07860a2d7eb515d9a" # Amazon2 Linux AMI ID
 }
 
 variable "ec2_instance_count" {
   description = "EC2 Instance Count"
   type        = number
-  default     = 1
+  default     = 5
 }

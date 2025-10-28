@@ -13,7 +13,7 @@ resource "aws_security_group" "vpc-ssh" {
     description = "Allow all IP and Ports outbound"
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"
+    protocol    = "-1"  # -1 means all protocols
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
