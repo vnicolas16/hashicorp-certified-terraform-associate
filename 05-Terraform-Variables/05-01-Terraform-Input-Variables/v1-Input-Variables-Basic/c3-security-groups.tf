@@ -2,6 +2,7 @@
 resource "aws_security_group" "vpc-ssh" {
   name        = "vpc-ssh"
   description = "Dev VPC SSH"
+  vpc_id      = "vpc-058f751168b086af1"   # add this
   ingress {
     description = "Allow Port 22"
     from_port   = 22
@@ -13,7 +14,7 @@ resource "aws_security_group" "vpc-ssh" {
     description = "Allow all IP and Ports outbound"
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"  # -1 means all protocols
+    protocol    = "-1" # -1 means all protocols
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
