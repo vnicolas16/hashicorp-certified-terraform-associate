@@ -4,7 +4,7 @@ resource "aws_instance" "my-ec2-vm" {
   instance_type          = "t3.micro"
   key_name               = "terraform-key"
   count                  = var.ec2_instance_count
-  subnet_id              = "subnet-09c76da31475bffe7" # add this
+  subnet_id              = "subnet-056112a70157043b6" # add this
   associate_public_ip_address = true                  # add this
   user_data              = <<-EOF
     #!/bin/bash

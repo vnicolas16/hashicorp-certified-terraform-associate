@@ -14,5 +14,5 @@ variable "ec2_ami_id" {
 variable "ec2_instance_count" {
   description = "EC2 Instance Count"
   type        = number
-  default     = 5
+  default     = 2
 }
