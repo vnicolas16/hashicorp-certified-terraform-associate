@@ -2,9 +2,10 @@
 resource "aws_instance" "my-ec2-vm" {
   ami                    = var.ec2_ami_id
   #instance_type          = var.ec2_instance_type[0]
-  instance_type = var.ec2_instance_type_map["big-apps"]
+  instance_type           = var.ec2_instance_type_map["big-apps"]
   key_name               = "terraform-key"
   count                  = var.ec2_instance_count
+  subnet_id              = "subnet-056112a70157043b6" # add this
   user_data              = <<-EOF
     #!/bin/bash
     sudo yum update -y
